@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>filtros 1(elemntos pares)</title>
+
+  </head>
+  <body>
+    <table>
+      <tr><td>1</td><td>2</td><td>3</td></tr>
+      <tr><td>4</td><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td>8</td><td>9</td></tr>
+      <tr><td>10</td><td>11</td><td>12</td></tr>
+    </table>
+
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('tr:odd').css("background","#9cf");
+      });
+
+    </script>
+  </body>
+</html>

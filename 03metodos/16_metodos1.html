@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>método html</title>
+
+  </head>
+  <body>
+
+  <p id="texto">
+    Este es el primer parrafo de id <b>texto</b>
+  </p>
+  <p id="texto2">
+
+  </p>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        alert($('#texto b').html());
+
+        $('#texto2').html("texto del parrafo dos con el <b>metodo html de jquery</b>")
+      });
+
+    </script>
+  </body>
+</html>

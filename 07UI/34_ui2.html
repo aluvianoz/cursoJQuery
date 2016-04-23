@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>JQuery ui - Draggable</title>
+    <link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      #mover{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mover" >
+      <p>Mover</p>
+    </div>
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#mover').draggable({
+          axis: "x",
+          cursor: "crosshair",
+          revert: true,
+          start: function(){
+              $('#mover').text('al iniciar');
+          },
+          drag: function(){
+            $('#mover').text('al mover');
+          },
+          stop: function(){
+              $('#mover').text('al detener');
+          },
+
+        });
+
+      });
+
+    </script>
+  </body>
+</html>

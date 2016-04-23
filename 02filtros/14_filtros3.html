@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>filtros -exclusion de elemento, primer hijo, ultimo hijo</title>
+
+  </head>
+  <body>
+
+  <ul>
+    <li>lista1</li>
+    <li>lista2</li>
+    <li>lista3</li>
+    <li>lista4</li>
+    <li>lista5</li>
+  </ul>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      //exclusion  $('li:not(:first,:last)').css('background','#9cf');
+      //primer hijo    $('li:first-child').css('background','#9cf');
+      //ultimo hijo      $('li:last-child').css('background','#9cf');
+          $('ul li:nth-child(2)').css('background','#9cf');
+      });
+
+    </script>
+  </body>
+</html>

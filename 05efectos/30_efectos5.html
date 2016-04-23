@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>efectos- animacion</title>
+    <style media="screen">
+      #cuadro{
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        position: absolute;
+      }
+    </style>
+
+  </head>
+  <body>
+    <button type="button" name="button" id="animar">Animar</button>
+    <button type="button" name="button" id="izq">Izquierda</button>
+    <button type="button" name="button" id="der">Derecha</button>
+    <button type="button" name="button" id="arr">Arriba</button>
+    <button type="button" name="button" id="aba">Abajo</button>
+<br>
+      <div id="cuadro">
+
+      </div>
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#animar').click(function(event){
+              $('#cuadro').animate({width: 800, height: 600},2000);
+              $('#cuadro').animate({width: 200, height: 100},2000);
+              $('#cuadro').animate({opacity: 0.5},2000);
+           });
+
+    $('#izq').click(function(event){
+      $('#cuadro').animate({'left': '-=50'}, 1000);
+    });
+
+    $('#der').click(function(event){
+      $('#cuadro').animate({'left': '+=50'}, 1000);
+    });
+
+    $('#arr').click(function(event){
+      $('#cuadro').animate({'top': '-=50'}, 1000);
+    });
+    $('#aba').click(function(event){
+      $('#cuadro').animate({'top': '+=50'}, 1000);
+    });
+
+
+        });
+
+
+    </script>
+  </body>
+</html>

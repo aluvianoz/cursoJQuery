@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>JQuery ui - progressbar</title>
+    <link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+  <body>
+  <div id="progreso"></div>
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var contador=0;
+        $('#progreso').progressbar({
+          value: false
+        })
+
+          setInterval(function(){
+            contador = contador + 5;
+            $('#progreso').progressbar("value",contador);
+          }, 1000);
+      });
+
+    </script>
+  </body>
+</html>

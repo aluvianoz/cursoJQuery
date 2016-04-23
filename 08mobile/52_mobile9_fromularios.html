@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Jquery Mobile - > formmularios</title>
+    <link rel="stylesheet" href="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+
+<div data-role="page" >
+
+  <div data-role="header">
+    <h1>formularios</h1>
+  </div>
+
+  <div data-role="content">
+    <form class="" action="index.html" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="name" value="">
+      <label for="comentario">Comentario:</label>
+      <textarea name="comentario" rows="8" cols="40"></textarea>
+        <select class="" name="pais">
+          <option value="">España</option>
+          <option value="">México</option>
+          <option value="">Colombia</option>
+        </select>
+        <label for="edad">Edad</label>
+        <input type="range" min="14" max="90">
+        <label for="slider">Suscribirse</label>
+        <select class="" name="slider" data-role="slider">
+          <option value="">SI</option>
+          <option value="">NO</option>
+
+        </select>
+        <fieldset data-role="controlgroup">
+          <input type="radio" name="color" id="rojo">
+          <label for="rojo">Rojo</label>
+          <input type="radio" name="color" id="verde">
+          <label for="verde">Verde</label>
+          <input type="radio" name="color" id="azul">
+          <label for="azul">Azul</label>
+        </fieldset>
+    </form>
+
+</div>
+    <div data-role="footer">
+    <h2>pie de página</h2>
+    </div>
+
+</div>
+
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+  </body>
+</html>

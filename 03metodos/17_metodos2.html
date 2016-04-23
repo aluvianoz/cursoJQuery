@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>metodo..css</title>
+    <style media="screen">
+      .rojo{
+        color: red;
+        background-color: #9cf;
+      }
+    </style>
+
+  </head>
+  <body>
+
+    <p>texto de parrafo 1</p>
+    <p class="rojo">texto de parrafo 2</p>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //$('p:last').addClass("rojo");agregar clase
+        //remover clase
+        $('p:last').removeClass("rojo");
+      });
+
+    </script>
+  </body>
+</html>

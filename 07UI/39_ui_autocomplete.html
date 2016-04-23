@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>JQuery ui - Autocomplete</title>
+    <link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <label for="color">Color</label>
+    <input type="text" id="color">
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          var colores = [
+            "rojo",
+            "verde",
+            "azul",
+            "negro",
+            "blanco",
+            "rosa"
+          ];
+
+          $('#color').autocomplete({
+              source: colores
+          });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>ajax Calculadora</title>
+
+
+  </head>
+  <body>
+    <center>
+      <h1>Calculadora jquery</h1>
+      <br>
+    <form id="calculadora">
+      <label>Primer Número</label>
+      <input type="text" name="num1">
+
+      <label>Segundo Número</label>
+      <input type="text" name="num2">
+
+      <label>Operacion</label>
+      <select  name="operacion">
+        <option value="suma">Sumar</option>
+        <option value="resta">Restar</option>
+        <option value="multiplicacion">Multiplicación</option>
+        <option value="division">División</option>
+      </select>
+
+      <button type="button" id="calcular">Calcular</button>
+    </form>
+    <br>
+    <div id="resultado" style="font-size: 20px">
+
+    </div>
+</center>
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+          $('#calcular').click(function(event){
+            var datos = $('#calculadora').serialize();
+
+           $('#resultado').html('<img src="725.gif">');
+
+            $.ajax({
+              url:'calculadora.php',
+              type:'POST',
+              dataType:'json',
+              data: datos
+            }).done(function(data){
+              $('#resultado').text('La ' + $('[name=operacion]').val() + '  de ' + data.num1 + ' y ' + data.num2 + ' es ' + data.resultado);
+              $('#resultado').css("font-weight","bolder");
+              $('#resultado').attr('src','');
+            });
+
+          });
+
+
+
+
+
+
+        });
+
+    </script>
+  </body>
+</html>

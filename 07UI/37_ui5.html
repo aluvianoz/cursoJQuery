@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>JQuery ui - Selectable</title>
+    <link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+    <style media="screen">
+      #seleccionar .ui-selecting{background: #FECA40;}
+      #seleccionar .ui-selected{background: #F39814;color: white; }
+      #seleccionar{list-style-type: none; margin: 0;padding: 0;width: 60%;}
+      #seleccionar li{margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px;}
+    </style>
+  </head>
+  <body>
+    <ul id="seleccionar">
+      <li class="ui-widget-content">Item 1</li>
+      <li class="ui-widget-content">Item 2</li>
+      <li class="ui-widget-content">Item 3</li>
+      <li class="ui-widget-content">Item 4</li>
+      <li class="ui-widget-content">Item 5</li>
+      <li class="ui-widget-content">Item 6</li>
+      <li class="ui-widget-content">Item 7</li>
+    </ul>
+<br>
+<div id="resultado"></div>
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#seleccionar').selectable({
+          stop: function(){
+            var resultado= $('#resultado').empty();
+            $('.ui-selected', this).each(function(){
+              var index = $('#seleccionar li').index(this);
+              resultado.append('Selecciono ' + (index+1));
+            });
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

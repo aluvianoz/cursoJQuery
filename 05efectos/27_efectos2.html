@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>efecto fade in fade out</title>
+
+  </head>
+  <body>
+  <center>
+    <img src="cubo.jpg" alt="cubo" />
+    <br>
+    <button type="button" name="button" id="mostrar">Mostrar</button>
+    <button type="button" name="button" id="ocultar">Ocultar</button>
+  </center>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#mostrar').click(function(event){
+          $('img').fadeIn(1500,function(){
+            alert('se termino de mostrar la imagen');
+          });
+        });
+        $('#ocultar').click(function(event){
+            $('img').fadeOut(2000,mensaje);
+        });
+        function mensaje(){
+          alert('Se ha terminado de ocultar la imagen');
+        }
+      });
+
+    </script>
+  </body>
+</html>

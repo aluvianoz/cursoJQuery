@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>efectos slide down, slideUp y slideToggle</title>
+
+  </head>
+  <body>
+    <center>
+      <img src="cubo.jpg"  alt="cubo" width="299px"/>
+      <br>
+      <button type="button" name="button" id="mostrar">Mostrar</button>
+      <button type="button" name="button" id="ocultar">Ocultar</button>
+      <button type="button" name="button" id="om">Ocultar/Mostrar</button>
+    </center>
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        $('#mostrar').click(function(event){
+            $('img').slideDown(3000);
+        });
+        $('#ocultar').click(function(event){
+          $('img').slideUp(3000);
+
+        });
+        $('#om').click(function(event){
+          $('img').slideToggle(1000);
+
+        });
+
+      });
+
+    </script>
+  </body>
+</html>

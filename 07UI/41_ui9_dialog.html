@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Jquery ui .dialog</title>
+    <link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+
+  </head>
+  <body>
+<div id="dialogo" title="ventana">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
+<button type="button" name="button" id="ventana">Mostrar ventana</button>
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#dialogo').dialog({
+            autoOpen:false,
+            modal: true,
+            show: {
+              effect: "blind",
+              duration: 1000
+            },
+            hide:{
+              effect: "explode",
+              duration: 3000
+            },
+            buttons:{
+              "Eliminar": function(){
+                alert('Presiono eliminar');
+              },
+              Cancel: function(){
+                $(this).dialog("close");
+              }
+            }
+          });
+      });
+      $('#ventana').click(function(event){
+        $('#dialogo').dialog("open");
+      });
+
+    </script>
+  </body>
+</html>

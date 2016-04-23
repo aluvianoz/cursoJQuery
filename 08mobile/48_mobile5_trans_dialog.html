@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Jquery Mobile - >estructura de una pag</title>
+    <link rel="stylesheet" href="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+
+<div data-role="page" id="pag1">
+
+  <div data-role="header">
+<h1>pagina 1</h1>
+  </div>
+
+  <div data-role="content">
+<a href="#pag2" data-transition="slideup" data-role="button">Ir a pag 2</a>
+</div>
+    <div data-role="footer">
+<h2>pie de pagina 1</h2>
+    </div>
+
+
+
+</div>
+
+<div data-role="page" id="pag2">
+
+  <div data-role="header">
+<h1>pagina 2</h1>
+  </div>
+
+  <div data-role="content">
+<a href="#pag1" data-transition="flip" data-role="button">Ir a pag 1</a>
+<a href="#dialogo" data-rel="dialog" data-role="button">Dialogo</a>
+
+</div>
+    <div data-role="footer">
+<h2>pie de pagina 2</h2>
+    </div>
+
+
+
+</div>
+
+<div data-role="page" id="dialogo">
+
+  <div data-role="header">
+<h1>Dialogo</h1>
+  </div>
+
+  <div data-role="content">
+<a href="#pag1"  data-role="button">Aceptar</a>
+<a href="#pag1"  data-role="button">Cancelar</a>
+</div>
+
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+  </body>
+</html>

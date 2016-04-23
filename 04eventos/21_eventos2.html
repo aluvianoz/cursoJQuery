@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Evento change</title>
+
+  </head>
+  <body>
+
+    <select name="" id="seleccion">
+      <option value="1">opcion 1</option>
+      <option value="2">opcion 2</option>
+      <option value="3">opcion 3</option>
+      <option value="4">opcion 4</option>
+    </select>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+         $('#seleccion').change(function(){
+
+            var contenido = $('#seleccion').val();
+
+
+           alert('seleccionaste la opción' + contenido);
+         });
+      });
+
+    </script>
+  </body>
+</html>

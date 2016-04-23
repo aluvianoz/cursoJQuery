@@ -1,0 +1,17 @@
+body{
+  font-family: 'Muli', sans-serif;
+}
+
+.tabla{
+  width: 80%;
+  border: 2px solid blue;
+}
+.tabla th{
+  background-color: #0040FF;
+}
+.tabla td{
+  background-color:#5882FA;
+  text-align: center;
+  padding: 10px 0px;
+
+}

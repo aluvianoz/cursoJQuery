@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Efectos jquery 1</title>
+
+  </head>
+<body>
+<center>
+    <img src="cubo.jpg" alt="cubo rubik" />
+  <br>
+  <button type="button" name="button" id="ocultar">Ocultar</button>
+  <button type="button" name="button" id="mostrar">Mostrar</button>
+</center>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#ocultar').click(function(event){
+          $('img').hide(2000);
+        });
+        $('#mostrar').click(function(event){
+          $('img').show(2000);
+        });
+      });
+
+    </script>
+  </body>
+</html>

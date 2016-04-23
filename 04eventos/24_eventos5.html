@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Evendos doble click, focus y blur</title>
+
+  </head>
+  <body>
+
+    <form action="">
+      <input type="text" id="texto">
+      <button type="button" name="button" id="btn">click!</button>
+    </form>
+
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $('#btn').dblclick(function(event){
+          alert('dio doble click');
+        });
+
+        $('#texto').focus(function(event){
+          $('#texto').val('Ingrese email');
+        });
+
+        $('#texto').blur(function(event){
+          $('#texto').val('');
+        })
+
+      });
+
+    </script>
+  </body>
+</html>

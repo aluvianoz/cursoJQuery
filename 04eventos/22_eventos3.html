@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Eventos mouseover,mouse out y hover</title>
+    <style media="screen">
+      #cuadro{
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+
+      <div id="cuadro"></div>
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /*
+        $('#cuadro').mouseover(function(){
+            $('#cuadro').css('background-color','green');
+
+
+        });
+        $('#cuadro').mouseout(function(){
+            $('#cuadro').css('background-color','red');
+
+
+        });*/
+        $('#cuadro').hover(function(){
+          $('#cuadro').css('background-color','green');
+        },function(){
+          $('#cuadro').css('background-color','red');
+
+        });
+      });
+
+    </script>
+  </body>
+</html>

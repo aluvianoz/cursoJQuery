@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>metodos, ppend.perepend.after.before</title>
+
+  </head>
+  <body>
+
+  <p id="texto">
+    Texto de parrafo con ide <b>"texto"</b>
+  </p>
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#texto').append(' esto es con append');
+        $('#texto').prepend(' esto es con prepend');
+        $('#texto').after('<p>Parrado creado con after</p>');
+        $('#texto').before('<p>Parrado creado con before</p>');
+
+      });
+
+    </script>
+  </body>
+</html>

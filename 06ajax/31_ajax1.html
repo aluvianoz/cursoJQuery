@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Ajax sumar dos numeros</title>
+
+  </head>
+  <body>
+    <form id="suma_form">
+        <input type="text" name="num_a">
+        <input type="text" name="num_b">
+        <button type="button" id="enviar">Enviar</button>
+    </form>
+    <br>
+    <div id="resultado">
+efsdc
+    </div>
+
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#enviar').click(function(event){
+          /*  var num1 = $('#num1').val();
+            var num2 = $('#num2').val();*/
+        var numeros =   $('#suma_form').serialize();
+          //  $.post('sumar.php',{"num_a":num1,"num_b":num2},function(datos){
+              $.post('sumar.php',numeros,function(datos){
+              $('#resultado').text(datos);
+
+            });
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Jquery Mobile - >estructura de una pag</title>
+    <link rel="stylesheet" href="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+
+<div data-role="page" id="pag1" data-theme="b">
+
+  <div data-role="header">
+    <h1>Página 1</h1>
+  </div>
+
+  <div data-role="content">
+    <a href="#pag2" data-role="button">Ir Página 2</a>
+  </div>
+
+  <div data-role="footer">
+  <h2>pie de página 1</h2>
+  </div>
+
+</div>
+
+<div data-role="page" id="pag2">
+
+  <div data-role="header">
+    <h1>Página 2</h1>
+  </div>
+
+  <div data-role="content">
+<a href="#pag1" data-role="button">Ir Página 1</a>
+
+<a href="mailto:aluvianoz@gmail.com" data-role="button">Enviar Email</a>
+<a href="tel:525529363455" data-role="button">Llamada telefonica</a>
+  </div>
+
+  <div data-role="footer">
+  <h2>pie de página2</h2>
+  </div>
+
+</div>
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+  </body>
+</html>

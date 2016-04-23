@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Evento Click</title>
+
+  </head>
+  <body>
+
+  <p>texto de parrafo uno</p>
+  <button id="mensaje">presiona</button>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('p').click(function(){
+            alert('dio click en el parrafo');
+        });
+
+        $('#mensaje').click(function(){
+          $('p').css('color','red');
+        });
+      });
+
+    </script>
+  </body>
+</html>

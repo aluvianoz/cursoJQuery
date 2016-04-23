@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>metodo text y css</title>
+
+  </head>
+  <body>
+
+<p id="texto1">texto del parrafo <b>1</b></p>
+<p id="texto2">texto del parrafo 2</p>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      alert($('#texto1').text());
+      $('#texto2').text('texto con el metodo text');
+      $('#texto2').css({
+        "color":"red",
+        "font-size":"30px",
+        "border":"1px solid blue"
+      });
+    </script>
+  </body>
+</html>

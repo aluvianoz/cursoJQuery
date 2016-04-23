@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+
+  </head>
+  <body>
+
+    <p id="tx">
+      texto parafo con id tx
+    </p>
+    <div class="rojo">
+      texto del div con clase rojo
+    </div>
+    <p id="rj">
+      texto en parrafo con if rj
+    </p>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#tx,.rojo,#rj').css("color","red");
+      });
+
+    </script>
+  </body>
+</html>

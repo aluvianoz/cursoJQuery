@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Efectos toggle y fadeTo</title>
+
+  </head>
+  <body>
+      <center>
+        <img src="cubo.jpg" alt="cubo" />
+        <br>
+        <button type="button" name="button" id="mostrar">mostrar/esconder</button>
+      </center>
+      <center>
+        <img src="cubo.jpg" alt="cubo" id="cubo"/>
+        <br>
+        <button type="button" name="button" id="ocultar2">ocultar</button>
+        <button type="button" name="button" id="mostrar2">mostrar</button>
+      </center>
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#mostrar').click(function(event){
+            $('img').toggle(2000);
+        });
+
+        $('#ocultar2').click(function(event){
+            $('#cubo').fadeTo(2000,0.5);
+        });
+
+        $('#mostrar2').click(function(event){
+            $('#cubo').fadeTo(2000,0.9);
+        });
+
+
+
+
+      });
+
+    </script>
+  </body>
+</html>

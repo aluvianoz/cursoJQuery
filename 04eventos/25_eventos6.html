@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>eventos one, on, off</title>
+
+  </head>
+  <body>
+
+    <button type="button" name="button" id="btn">Boton solo un click</button>
+<button type="button" name="button" id="btn2">Boton one</button>
+<button type="button" name="button" id="btn3">Boton one2</button>
+
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#btn').one('click', function(){
+            alert('Este boton solo funcion una vez');
+          });
+
+          $('#btn2').on('click',function(){
+            alert('boton dos presionado');
+            $('#btn2').off();
+          });
+
+          $(document).on('click','#btn3',function(){
+            alert('boton 3 presionado');
+          })
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Evento mousemove</title>
+    <style media="screen">
+      #cuadro{
+        width: 500px;
+        height: 500px;
+        border: 2px solid red;
+      }
+    </style>
+
+  </head>
+  <body>
+    <p id="x"></p>
+    <p id="y"></p>
+
+    <div id="cuadro"></div>
+
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#cuadro').mousemove(function(event){
+            $('#x').text('Coordenada X: ' + event.clientX);
+            $('#y').text('Coordenada Y: ' + event.clientY);
+          });
+      });
+
+    </script>
+  </body>
+</html>

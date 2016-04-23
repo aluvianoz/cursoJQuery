@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>JQuery ui - droppable</title>
+    <link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+      <style media="screen">
+        #mover{
+          width: 100px;
+          height: 100px;
+          background-color: #F97929;
+        }
+        #soltar{
+          width: 220px;
+          height: 220px;
+          border: solid 2px black;
+        }
+        .soltado{
+          background-color: #D62743;
+        }
+        .hover{
+          background-color: blue;
+        }
+      </style>
+  </head>
+  <body>
+    <div id="mover">
+      <p>mover</p>
+    </div>
+
+    <div id="soltar">
+      <p>soltar aqui</p>
+    </div>
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $('#mover').draggable({
+          revert:true
+        });
+        $('#soltar').droppable({
+          hoverClass:"hover",
+          drop: function(event, ui){
+            $(this).addClass('soltado').find("p").text('elemento soltado dentro');
+          }
+        });
+
+      });
+
+    </script>
+  </body>
+</html>

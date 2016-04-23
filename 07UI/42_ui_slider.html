@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>JQuery ui - slider</title>
+    <link rel="stylesheet" href="../jquery-ui-1.11.4/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+  <body>
+  <div id="volumen"></div>
+  <p id="rangoa"></p>
+  <p id="rangob"></p>
+
+    <script src="../js/jquery-2.2.3.min.js"/></script>
+    <script src="../jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $('#volumen').slider({
+            range: true,
+            min: 0,
+            max:500,
+            values:[75,250],
+            slide: function(event, ui){
+              $('#rangoa').text(ui.values[0]);
+              $('#rangob').text(ui.values[1]);
+            }
+          });
+      });
+
+    </script>
+  </body>
+</html>

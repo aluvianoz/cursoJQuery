@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1">
+    <title>Filtros,por texto, cont vavion, concreto, atributos</title>
+
+    <style media="screen">
+      table{
+        width: 210px;
+        border: 1px solid black;
+
+      }
+    </style>
+  </head>
+  <body>
+
+      <p>Primer parrafo de contenido</p>
+      <p>Segundo parrafo de contenido</p>
+      <p>tercer parrrafo</p>
+
+      <br>
+      <table >
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+<br>
+      <p>parrafo uno ejemplo 2</p>
+      <p><a href="">enlace</a></p>
+      <p>parrafp dos</p>
+
+      <br>
+
+      <ul>
+        <li class="negrita">item de la lista numero1</li>
+        <li>item de la lista numero2</li>
+        <li class="negrita">item de la lista numero3</li>
+        <li class="negrita">item de la lista numero4</li>
+        <li>item de la lista numero5</li>
+      </ul>
+    <script src="js/jquery-2.2.3.min.js"/></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('p:contains(Pri)').css("background","red");
+
+
+        $('td:empty').css('background',"#9cf");
+
+        $('p:has(a)').css("background","#09f");
+
+        $('li[class]').css("color","blue");
+      });
+
+    </script>
+  </body>
+</html>
